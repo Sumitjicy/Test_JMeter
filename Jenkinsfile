@@ -53,14 +53,6 @@ pipeline {
  useWrapperFileDirectly: true
  ])
  }
- // 2️⃣Publish Performance Plugin graphs
- if (fileExists('results.jtl')) {
- perfReport(
- sourceDataFiles: 'results.jtl',
- errorFailedThreshold: 1,
- errorUnstableThreshold: 0
- )
- }
  
  }
  }

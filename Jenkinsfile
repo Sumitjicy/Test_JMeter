@@ -26,8 +26,7 @@ pipeline {
  if exist jmeter-report rmdir /s /q jmeter-report
  '''
  // Run JMeter non-GUI
- bat "\"%JMETER_HOME%\\bin\\jmeter.bat\" -n -t \"%WORKSPACE%\\Jmeter_File\\Spike_Test.jmx\" -l
-results.jtl -e -o jmeter-report"
+ bat "\"%JMETER_HOME%\\bin\\jmeter.bat\" -n -t \"%WORKSPACE%\\test.jmx\" -l results.jtl -e -o jmeter-report"
  // Optional: list report folder
  bat 'dir jmeter-report /s'
  }

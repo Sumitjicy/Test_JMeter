@@ -37,28 +37,4 @@ pipeline {
  }
  }
  }
- post {
- success {
- echo "Publishing JMeter reports in Jenkins"
- script {
- // 1️⃣Publish HTML report
- if (fileExists('jmeter-report/index.html')) {
- publishHTML(target: [
- allowMissing: false,
- alwaysLinkToLastBuild: true,
- keepAll: true,
- reportDir: 'jmeter-report',
- reportFiles: 'index.html',
- reportName: 'JMeter Test HTML Report',
- useWrapperFileDirectly: true
- ])
- }
- 
- }
- }
- failure {
- echo "Pipeline failed!"
- 
- }
- }
 }

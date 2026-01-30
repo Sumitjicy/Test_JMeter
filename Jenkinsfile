@@ -2,7 +2,7 @@ pipeline {
  agent any
  environment {
  // JMeter installation directory
- JMETER_HOME = "D:\JMeter_data\apache-jmeter-5.6.3"
+ JMETER_HOME = "D:\\JMeter_data\\apache-jmeter-5.6.3"
  PATH = "${JMETER_HOME}\\bin;${env.PATH}"
  }
  stages {
